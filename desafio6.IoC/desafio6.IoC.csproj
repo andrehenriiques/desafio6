@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\desafio6.Domain\desafio6.Domain.csproj" />
+    <ProjectReference Include="..\desafio6.Application\desafio6.Application.csproj" />
+    <ProjectReference Include="..\desafio6.Data\desafio6.Data.csproj" />
+    <ProjectReference Include="..\desafio6.Data.Mongo\desafio6.Data.Mongo.csproj" />
+  </ItemGroup>
+
+</Project>
