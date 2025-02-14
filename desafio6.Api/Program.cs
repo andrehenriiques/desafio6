@@ -6,10 +6,10 @@ using desafio6.IoC;var builder = WebApplication.CreateBuilder(args);
 DependencyContainer.RegisterServices(builder.Services
 , builder.Configuration.GetConnectionString("MongoConnectionString"), builder.Configuration);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>().AddProblemDetails();
-builder.Services.AddControllers();
 builder.Services.AddAutoMapper(typeof(Program));
 var app = builder.Build();
 
