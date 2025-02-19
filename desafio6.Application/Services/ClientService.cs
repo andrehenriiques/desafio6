@@ -1,8 +1,6 @@
-using desafio6.Data.Mongo.Entity;
 using desafio6.Domain.Interfaces.Repository;
 using desafio6.Domain.Interfaces.Services;
 using desafio6.Domain.Models;
-using MongoDB.Bson;
 
 namespace desafio6.Application.Services;
 

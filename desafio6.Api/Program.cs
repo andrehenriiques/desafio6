@@ -1,6 +1,11 @@
 
+using Desafio6.Api.Controllers;
 using desafio6.Api.Filters;
-using desafio6.IoC;var builder = WebApplication.CreateBuilder(args);
+using desafio6.IoC;
+
+using MassTransit;
+
+var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 DependencyContainer.RegisterServices(builder.Services

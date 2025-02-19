@@ -7,12 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MassTransit.Abstractions" Version="8.2.2" />
     <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\desafio6.Data.Mongo\desafio6.Data.Mongo.csproj" />
     <ProjectReference Include="..\desafio6.Domain\desafio6.Domain.csproj" />
+    <ProjectReference Include="..\desafio6.MsgContracts\desafio6.MsgContracts.csproj" />
   </ItemGroup>
 
 </Project>

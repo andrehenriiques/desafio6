@@ -3,7 +3,6 @@ using desafio6.Api.Dto;
 using desafio6.Domain.Interfaces.Services;
 using desafio6.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
-using MongoDB.Bson;
 
 namespace Desafio6.Api.Controllers;
 
@@ -33,6 +32,15 @@ public class ClientController(IClientService clientService, IMapper mapper) : Co
         var mapClient = mapper.Map<ClientAddressDto, ClientAddressModel>(client);
         var clientAdd = await clientService.PostClient(mapClient);
         return Ok(clientAdd);
+    }
+    
+    [HttpPost("SendRabbitMQ")]
+    public async Task<IActionResult> PostClientRabbit()
+    { 
+       // var mapClient = mapper.Map<ClientAddressDto, ClientAddressModel>(client);
+       var mapClient = new ClientAddressModel();
+       // await clientService.PostClientRabbitMq(mapClient);
+        return Ok("Mensagem enviada com sucesso!");
     }
  
     [HttpPut("{id}")]
